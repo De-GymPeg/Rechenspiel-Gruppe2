@@ -51,5 +51,7 @@ public class Darstellung
 
         frame.pack();
         frame.setVisible(true);
+        
+        button.addActionListener(steuerung);
     }
 }
