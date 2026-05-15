@@ -16,12 +16,16 @@ public class Logik extends Observable
     
     void zahl1Setzen() {
         // TODO
+        zahl1 = zufallszahlGeben(20);
         setChanged();
         notifyObservers();
     }
 
     void zahl2Setzen() {
         // TODO
+        zahl2 = zufallszahlGeben(20);
+        setChanged();
+        notifyObservers();
     }
     
     void operationSetzen() {
@@ -34,14 +38,16 @@ public class Logik extends Observable
     boolean istRichtig(int ergebnis) {
         switch (operation) {
             case "+":
+            return zahl1 + zahl2 == ergebnis;
                 // TODO
-                return false;
+               
             case "-":
                 // TODO
-                return false;
+                return zahl1 - zahl2 == ergebnis;
+                
             case "*":
                 // TODO
-                return false;
+                return zahl1 * zahl2 == ergebnis;
             default:
                 return false;
         }
@@ -49,6 +55,7 @@ public class Logik extends Observable
 
     int zufallszahlGeben(int grenze) {
         // TODO
-        return 0;
+        Random random = new Random();
+        return random.nextInt(grenze);
     }
 }
