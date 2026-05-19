@@ -38,6 +38,7 @@ public class Darstellung
         ergebnisField = new JTextField();
         button = new JButton();
         feedbackLabel = new JLabel();
+        feedbackLabel.setOpaque(true);
 
         /* Hierarchie herstellen */
         frame.add(panel1);
