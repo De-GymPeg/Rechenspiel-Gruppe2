@@ -39,6 +39,7 @@ public class Darstellung
         button = new JButton();
         feedbackLabel = new JLabel();
         feedbackLabel.setOpaque(true);
+        ergebnisField.addActionListener(steuerung);
 
         /* Hierarchie herstellen */
         frame.add(panel1);
